@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating Survey</title>
+    <!--Let browser know website is optimized for mobile-->
+        <link rel="shortcut icon" href="asset/img/LogoSurvey.png" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Import CSS-->
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="asset/css/bootlize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="asset/css/thame2.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="asset/css/survey2.css"  media="screen,projection"/>
+        <!--Import  ICON Social media-->
+        <link rel="stylesheet" href="css/bootlize-sosmedicon.css"/>
+        <!--Import Google Icon Font (IF NEED )
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+    <!--Import Js-->
+        <script src="asset/js/jquery-3.2.1.min.js"></script>
+        <script src="asset/js/bootlize.min.js"></script>
+</head>
+<body>
+<div class="background-primary">
+<header>
+    <div class="head-bg center">
+        <img src="asset/img/brush_screen.png" alt="">
+        <div class="head-text">
+            <p awal>SURVEY</p>
+            <p akhir></p>
+        </div><!--/head text-->
+    </div><!--/.head bg-->
+</header>
+<main>
+<div class="container-material">
+<form action="" role="form" id="formfield">
+    <!--MAKANAN-->
+    <div class="row ea-1">
+        <div class="col-sm-12 col-xs-12 col-lg-4 center">
+            <div class="con-user solo">
+                <div class="animationmuter"></div><!--/.animation muter-->
+                <div class="con-img">
+                    <img src="asset/img/food2.png" alt="Augusta Albertus" class="img-con">
+                </div><!--/.conimg-->
+            </div><!--/.conuser-->
+        </div><!--col-->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+        <div class="box box-orange box-example-movie">
+            <div class="box-animasi"></div>
+            <div class="box-title">MAKANAN</div>
+            <div class="box-header"><div id="food"></div></div>
+        </div>
+        </div><!--/.col-->
+        <div class="col-xs-12 center">
+            <a class="btn blue darken-3 waves-effect waves-light next-1" href="#!">Next</a>
+        </div>
+    </div><!--/.row-->
+    
+    <!--MUSIK-->
+    <div class="row ea-2" style="display:none;">
+        <div class="col-sm-12 col-xs-12 col-lg-4 center">
+            <div class="con-user solo">
+                <div class="animationmuter"></div><!--/.animation muter-->
+                <div class="con-img">
+                    <img src="asset/img/Music.png" alt="Augusta Albertus" class="img-con">
+                </div><!--/.conimg-->
+            </div><!--/.conuser-->
+        </div><!--col-->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+        <div class="box box-orange box-example-movie">
+            <div class="box-animasi"></div>
+            <div class="box-title">MUSIK</div>
+            <div class="box-header"><div id="musik"></div></div>
+        </div>
+        </div><!--/.col-->
+        <div class="col-xs-12 center">
+            <a class="btn red darken-3 waves-effect waves-light back-2" href="#!">Back</a>
+            <a class="btn blue darken-3 waves-effect waves-light next-2" href="#!">Next</a>
+        </div>
+    </div><!--/.row-->
+    
+    <!--DEKORASI-->
+    <div class="row ea-3" style="display:none;">
+        <div class="col-sm-12 col-xs-12 col-lg-4 center">
+            <div class="con-user solo">
+                <div class="animationmuter"></div><!--/.animation muter-->
+                <div class="con-img">
+                    <img src="asset/img/decoratio2.png" alt="Augusta Albertus" class="img-con">
+                </div><!--/.conimg-->
+            </div><!--/.conuser-->
+        </div><!--col-->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+        <div class="box box-orange box-example-movie">
+            <div class="box-animasi"></div>
+            <div class="box-title">DEKORASI</div>
+            <div class="box-header"><div id="dekorasi"></div></div>
+        </div>
+        </div><!--/.col-->
+        <div class="col-xs-12 center">
+            <a class="btn red darken-3 waves-effect waves-light back-3" href="#!">Back</a>
+            <a class="btn blue darken-3 waves-effect waves-light next-3" href="#!">Next</a>
+        </div>
+    </div><!--/.row-->
+    
+    <!--PELAYANAN-->
+    <div class="row ea-4" style="display:none;">
+        <div class="col-sm-12 col-xs-12 col-lg-4 center">
+            <div class="con-user solo">
+                <div class="animationmuter"></div><!--/.animation muter-->
+                <div class="con-img">
+                    <img src="asset/img/weiterz.png" alt="Augusta Albertus" class="img-con">
+                </div><!--/.conimg-->
+            </div><!--/.conuser-->
+        </div><!--col-->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-8">
+        <div class="box box-orange box-example-movie">
+            <div class="box-animasi"></div>
+            <div class="box-title">PELAYANAN</div>
+            <div class="box-header"><div id="pelayanan"></div></div>
+        </div>
+        </div><!--/.col-->
+        <div class="col-xs-12 center">
+            <a class="btn red darken-3 waves-effect waves-light back-4" href="#!">Back</a>
+            <a href="#modal1" class="btn orange darken-3 waves-effect waves-light modal-trigger">Selesai</a>
+        </div>
+    </div><!--/.row-->
+</form>
+<!-- Modal Structure -->
+  <div id="modal1" class="modal z-depth-5 orange lighten-4">
+    <div class="modal-content center">
+      <h4 class="font-4">Anda Yakin ?</h4>
+      
+      <button onclick="storeData()" class="btn success orange darken-2">Ya</button>
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn red lighten-1">Batal</a>
+    </div>
+<!--    <div class="modal-footer"></div>-->
+</div><!--/contanier-->
+</main>
+<footer>
+    <div class="container-material">
+    <div class="row">
+        <div class="col-xs-12 center">
+            <p x-mas>
+                <span class="niik">Jimmy</span>
+                <img src="asset/img/wedding.png" alt="">
+                <span class="niik">Wulan</span>
+            </p>
+        </div><!--/.col-->
+        <div class="col-xs-12 center">
+            <p>
+                <span class="copyright1">Original Concept by : </span>
+                <span class="copyright2">Jimmy Yogaswara | Birutekno inc.</span>
+            </p>
+        </div><!--/.col-->
+    </div><!--/.row-->
+    </div><!--/.container-->
+</footer>
+</div><!--/Background Primary-->
+</body>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCBv0ye0-gH5PDk4PnVjk23tR4FzbJ_b14",
+    authDomain: "guestlist-birutekno.firebaseapp.com",
+    databaseURL: "https://guestlist-birutekno.firebaseio.com",
+    projectId: "guestlist-birutekno",
+    storageBucket: "guestlist-birutekno.appspot.com",
+    messagingSenderId: "361147602447"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="asset/emoji-rating/emotion-ratings.js"></script>
+<script src="asset/js/survery2.js"></script>
+<script>
+    
+function storeData(){
+    // $('#formfield').submit();
+    document.getElementById('makanan');
+    var databaseRef = firebase.database();
+    var a = document.getElementById('makananRating');
+    var b = document.getElementById('musicRating');
+    var c = document.getElementById('dekorasiRating');
+    var d = document.getElementById('pelayananRating');
+    
+    databaseRef.ref('ratings/').push({
+        makanan: a.value,
+        music: b.value,
+        pelayanan: c.value,
+        dekorasi: d.value
+      }, function(error) {
+        if (error) {
+          console.log("Something went wrong!");
+        } else {
+          // Data saved successfully!
+        console.log("SUCCESS!");
+            if (Materialize.toast('Terima kasih atas kerja samanya :).', 3000, 'rounded')) {
+                $('#modal1').modal("close");
+                setTimeout(function(){ window.location.reload(); 
+                    /*LAYER2*/
+                    $('.ea-4').hide(1000);
+                    $('.ea-1').show(1000);
+                 }, 1300);
+            }
+            
+          // $("#makananRating").val("");
+          // $("#musicRating").val("");
+          // $("#dekorasiRating").val("");
+          // $("#pelayananRating").val("");
+        }
+      });
+}
+
+</script>
+</html>

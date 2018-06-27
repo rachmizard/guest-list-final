@@ -1,0 +1,34 @@
+/*THEME KHUSUS HALAMAN RESULT
+=======*/
+*{margin: 0 auto;padding: 0 auto;}html, body {margin: 0 auto;padding: 0 auto;background: orangered;}
+.primarycolor {background-color: #ed1c24!important;}.text-primarycolor {color: #ed1c24!important;}
+.primarycolor2 {background-color: #1d1d21!important;}.text-primarycolor2 {color: #1d1d21!important;}
+::-webkit-scrollbar-thumb{background: linear-gradient(to top, pink, orange);border-radius:3px}
+::-moz-scrollbar-thumb{linear-gradient(to top, pink, orange);border-radius:3px}
+::scrollbar-thumb{linear-gradient(to top, pink, orange);border-radius:3px}
+::selection {background-color: #ed1c24;color:rgba(225,225,225,0.8);color:gold;}
+::-webkit-scrollbar 					{ width: 10px;background: transparent;}
+::-webkit-scrollbar-thumb:hover 		{ background:linear-gradient(to bottom, pink, orange)}
+::-webkit-scrollbar-thumb:horizontal 	{ border-width:5px 6px;min-width:40px; }
+::-webkit-scrollbar-thumb:vertical 	    { border-width:6px 4px;min-height:40px; }
+/*SET FONT*/
+@font-face {
+  font-family: 'Helena-Font';
+  src: url('../fonts/Helena-Font/Helena.ttf');
+}
+@font-face {
+  font-family: 'Product_Sans1';
+  src: url('../fonts/Product Sans/Product Sans Bold Italic_0.ttf');
+}
+@font-face {
+  font-family: 'Product_Sans2';
+  src: url('../fonts/Product Sans/Product Sans Bold_0.ttf');
+}
+@font-face {
+  font-family: 'Product_Sans3';
+  src: url('../fonts/Product Sans/Product Sans Italic_0.ttf');
+}
+@font-face {
+  font-family: 'Product_Sans4';
+  src: url('../fonts/Product Sans/Product Sans Regular_0.ttf');
+}

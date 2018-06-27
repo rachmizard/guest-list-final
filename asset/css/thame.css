@@ -1,0 +1,33 @@
+*{margin: 0 auto;padding: 0 auto;}html, body {margin: 0 auto;padding: 0 auto;height: 100%;}
+.primarycolor {background-color: #ed1c24!important;}.text-primarycolor {color: #ed1c24!important;}
+.primarycolor2 {background-color: #1d1d21!important;}.text-primarycolor2 {color: #1d1d21!important;}
+::-webkit-scrollbar{width:8px;background:#FFF}
+::-webkit-scrollbar-thumb{background-color:#575757;border-radius:3px}
+::-moz-scrollbar{width:8px;background:#FFF}
+::-moz-scrollbar-thumb{background-color:#575757;border-radius:3px}
+::scrollbar{width:8px;background:#FFF}
+::scrollbar-thumb{background-color:#575757;border-radius:3px}
+::selection {background-color: #ed1c24;color:rgba(225,225,225,0.8);}
+::-moz-selection {background-color: #ed1c24;color:rgba(225,225,225,0.8);}
+::-webkit-selection {background-color: #ed1c24;color:rgba(225,225,225,0.8);}
+/*SET FONT*/
+@font-face {
+  font-family: 'Helena-Font';
+  src: url('../fonts/Helena-Font/Helena.ttf');
+}
+@font-face {
+  font-family: 'Product_Sans1';
+  src: url('../fonts/Product Sans/Product Sans Bold Italic_0.ttf');
+}
+@font-face {
+  font-family: 'Product_Sans2';
+  src: url('../fonts/Product Sans/Product Sans Bold_0.ttf');
+}
+@font-face {
+  font-family: 'Product_Sans3';
+  src: url('../fonts/Product Sans/Product Sans Italic_0.ttf');
+}
+@font-face {
+  font-family: 'Product_Sans4';
+  src: url('../fonts/Product Sans/Product Sans Regular_0.ttf');
+}

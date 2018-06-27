@@ -1,0 +1,71 @@
+/*BACKGROUND
+=============*/
+.background-primary {background-image: url(../img/bg_screen.png);height: 100%;background-size: cover;position: relative;background-position: center;}
+/*SM*/
+@media only screen and (max-width: 991px){
+    html,body {height: 100% !important;}
+  
+}
+/*MD*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    html,body {height: 100% !important;}
+    footer .row {
+      margin-right: 0px !important;
+      margin-left: 0px !important;
+      margin-bottom:0px !important;
+    }
+}
+/*LG*/
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
+  html,body {height: 100%;}
+    footer .row {
+      margin-right: 0px !important;
+      margin-left: 0px !important;
+      margin-bottom:0px !important;
+    }
+}
+@media only screen and (min-width: 1367px) {
+    html,body {height: 100%;}
+    footer .row {
+      margin-right: 0px !important;
+      margin-left: 0px !important;
+      margin-bottom:0px !important;
+    }
+}
+/*HEADER
+==============*/
+.head-bg {max-width: 600px;position: relative;}
+.head-bg img {width: 100%;}
+
+.head-text {position: absolute;top: 15px;width: 100%;height: 100%}
+p[awal]{font-family: Helena-Font;font-size: 40px;color:#252525;margin-top: 10px;margin-right: 20px;}
+p[akhir]{font-family: Helena-Font;font-size: 40px;color:#252525;position: relative;bottom: 15px;}
+
+/*MAIN
+=======*/
+
+/*MODAL
+=======*/
+.modal::before {}
+
+/*FOOTER
+========*/
+footer { position: absolute;bottom: 0px;margin-left: auto;margin-right: auto;width: 100%;}
+/*MD*/
+@media only screen and (min-width: 992px) and (max-width: 1366px) {
+    p[x-mas]{font-family: Helena-Font;font-size: 27px;color:#252525;position: relative;}
+    p[x-mas] span.niik{bottom: 30px;position: relative;}
+    p[x-mas] img {width: 100px;margin: 0px;padding: 0px;}
+    
+    span.copyright1 {font-family: Product_Sans4;font-size: 18px;}
+    span.copyright2 {font-family: Product_Sans2;font-size: 18px;}
+}
+/*LG*/
+@media only screen and (min-width: 1367px) {
+    p[x-mas]{font-family: Helena-Font;font-size: 47px;color:#252525;position: relative;}
+    p[x-mas] span.niik{bottom: 30px;position: relative;}
+    p[x-mas] img {width: 200px;margin: 0px;padding: 0px;}
+    
+    span.copyright1 {font-family: Product_Sans4;font-size: 28px;}
+    span.copyright2 {font-family: Product_Sans2;font-size: 28px;}
+}

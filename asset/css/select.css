@@ -1,0 +1,24 @@
+img.icona {width: 25px;position: relative;top: 5px;}
+/*SET BACKGROUND
+=================*/
+/*SET SM*/
+@media only screen and (max-width: 767px) {
+    body {background-image: url(../img/bg.png);background-size: cover;background-position: center;}
+}
+/*SET MD*/
+@media only screen and (min-width: 768px) {
+    body {background-image: url(../img/bg_screen.png);background-size: cover;background-position: center;}
+}
+/*SET HEAERDER
+==============*/
+.head-bg {max-width: 450px;position: relative;}
+.head-bg img {width: 100%;}
+
+.head-text {position: absolute;top: 0;width: 100%;height: 100%}
+p[awal]{font-family: Helena-Font;font-size: 40px;color:#f1f1f1;margin-top: 18px;margin-right: 20px;}
+p[kedua]{font-family: Helena-Font;font-size: 27px;color:#f1f1f1;position: relative;}
+p[kedua] span.niik{bottom: 30px;position: relative;}
+p[kedua] img {width: 100px;margin: 0px;padding: 0px;}
+p[akhir]{font-family: Helena-Font;font-size: 35px;color:#f1f1f1;position: relative;bottom: 15px;}
+/*SET FOOTER
+=============*/

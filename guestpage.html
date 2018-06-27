@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Import CSS-->
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="asset/css/bootlize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="asset/css/thame2.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="asset/css/result.css"  media="screen,projection"/>
+        <!--Import  ICON Social media-->
+        <link rel="stylesheet" href="asset/css/bootlize-sosmedicon.css"/>
+        <!--Import Google Icon Font (IF NEED )
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+        <style>
+            .fade {
+              animation-name: fade;
+              animation-duration: 2s;
+            }
+
+            @keyframes fade {
+              from {
+                opacity: 0;
+              }
+              to {
+                opacity: 1;
+              }
+            }
+        </style>
+    <!--Import Js-->
+        <script src="asset/js/jquery-3.2.1.min.js"></script>
+        <script src="asset/js/bootlize.min.js"></script>
+        
+</head>
+<body id="retrieve">
+<div class="opsi">
+      <span  class="aw">======================
+	  	<div class="checkboxThree">
+	  		<input type="checkbox" value="1" id="checkboxThreeInput" onclick="myFunction()">
+		  	<label for="checkboxThreeInput"></label>
+	  	</div>
+     </span>
+</div><!--/.opsi-->
+        
+
+
+
+<!---->
+<div class="scdown">
+    <a href="#!" id="ToUp">GoUp</a>
+    <a href="#!" id="ToDown">GoDown</a>
+</div><!--/total-->
+<!---->
+<div class="total">
+    <span id="total"></span>
+</div><!--/total-->
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCBv0ye0-gH5PDk4PnVjk23tR4FzbJ_b14",
+    authDomain: "guestlist-birutekno.firebaseapp.com",
+    databaseURL: "https://guestlist-birutekno.firebaseio.com",
+    projectId: "guestlist-birutekno",
+    storageBucket: "guestlist-birutekno.appspot.com",
+    messagingSenderId: "361147602447"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="system.js"></script>
+<script src="asset/js/result.js"></script>
+<!-- IntersectionObserver polyfill -->
+<script src="https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js"></script>
+<!-- Lozad.js from CDN -->
+<script src="https://cdn.jsdelivr.net/npm/lozad"></script>
+<script>
+    // Initialize library
+lozad('.lozad', {
+    load: function(el) {
+        el.src = el.dataset.src;
+        el.onload = function() {
+            el.classList.add('fade')
+        }
+    }
+}).observe();
+</script>
+</html>

@@ -1,0 +1,317 @@
+/*BACKGROUND
+=============*/
+.background-primary {background-image: url(../img/bg_screen.png);height: 100%;background-size: cover;position: relative;background-position: center;background-attachment: fixed;}
+/*SM*/
+@media only screen and (max-width: 991px){
+    html,body {min-height: 100% !important;}
+  
+}
+/*MD*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    html,body {min-height: 100% !important;}
+    footer .row {
+      margin-right: 0px !important;
+      margin-left: 0px !important;
+      margin-bottom:0px !important;
+    }
+}
+/*LG*/
+@media only screen and (min-width: 1200px) and (max-width: 1366px) {
+  html,body {height: 100%;}
+    footer .row {
+      margin-right: 0px !important;
+      margin-left: 0px !important;
+      margin-bottom:0px !important;
+    }
+}
+@media only screen and (min-width: 1367px) {
+    html,body {height: 100%;}
+}
+
+/*HEADER
+==============*/
+.head-bg {max-width: 600px;position: relative;}
+.head-bg img {width: 100%;}
+
+.head-text {position: absolute;top: 15px;width: 100%;height: 100%}
+p[awal]{font-family: Helena-Font;font-size: 100px;color:#fff;margin-top: 0px;margin-right: 0px;
+     -moz-animation:headtext 2s infinite linear;
+     -webkit-animation:headtext 2s infinite linear;
+}
+@-webkit-keyframes headtext {
+    0% { color: #feca02;opacity:1;}
+    25% {color: #ffff; opacity:1;}
+    50% { color: #252525;opacity:1;}
+    75% { color: #feca02;opacity:1;}
+    100% { color: #ffff;opacity:1;}
+}
+/*MAIN
+======*/
+.con-user {
+    width: 100%;height: 300px;
+    position: relative;
+}
+/*XS*/
+@media only screen and (max-width: 767px) {
+    .con-user {
+        height: 100px;
+    }
+  .animationmuter {width: 100px;height: 100px;
+        background: linear-gradient(to right, #ea576d, #feca02, #ff7043);
+        border-radius: 100%;
+        -moz-animation:spin5Pulse 1.5s infinite linear;
+        -webkit-animation:spin5Pulse 1.5s infinite linear;}
+    .con-img {
+        width: 100px;height: 100px;background: transparent;border-radius: 100%;padding-top: 10px;padding-left: 0px;
+        position: relative;bottom: 105px;
+    }
+    .con-img > img.img-con {width: 90px;height: 90px;border-radius: 100%;
+        -moz-animation:imgstay 2s infinite linear;
+        -webkit-animation:imgstay 2s infinite linear;
+    }
+    span.name {font-family: Product_Sans1;font-size:15px;width: 100%;color: #252525
+        -moz-animation:textc 4s infinite linear;
+        -webkit-animation:textc 4s infinite linear;
+    }
+    h1[codename] {font-family: Product_Sans2;font-size: 30px;text-shadow: 3px 3px 0px white}
+}
+/*SM*/
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .con-user {
+        height: 200px;
+    }
+  .animationmuter {width: 200px;height: 200px;
+        background: linear-gradient(to right, #ea576d, #feca02, #ff7043);
+        border-radius: 100%;
+        -moz-animation:spin5Pulse 1.5s infinite linear;
+        -webkit-animation:spin5Pulse 1.5s infinite linear;}
+    .con-img {
+        width: 200px;height: 200px;background: transparent;border-radius: 100%;padding-top: 10px;padding-left: 0px;
+        position: relative;bottom: 200px;
+    }
+    .con-img > img.img-con {width: 180px;height: 180px;border-radius: 100%;
+        -moz-animation:imgstay 2s infinite linear;
+        -webkit-animation:imgstay 2s infinite linear;
+    }
+    span.name {font-family: Product_Sans1;font-size: 30px;width: 100%;color: #252525
+        -moz-animation:textc 4s infinite linear;
+        -webkit-animation:textc 4s infinite linear;
+    }
+    h1[codename] {font-family: Product_Sans2;font-size: 70px;text-shadow: 3px 3px 0px white}
+}
+/*MD*/
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .animationmuter {width: 300px;height: 300px;
+        background: linear-gradient(to right, #ea576d, #feca02, #ff7043);
+        border-radius: 100%;
+        -moz-animation:spin5Pulse 1.5s infinite linear;
+        -webkit-animation:spin5Pulse 1.5s infinite linear;}
+    .con-img {
+        width: 300px;height: 300px;background: transparent;border-radius: 100%;padding-top: 10px;padding-left: 0px;
+        position: relative;bottom: 300px;
+    }
+    .con-img > img.img-con {width: 280px;height: 280px;border-radius: 100%;
+        -moz-animation:imgstay 2s infinite linear;
+        -webkit-animation:imgstay 2s infinite linear;
+    }
+    span.name {font-family: Product_Sans1;font-size: 30px;width: 100%;color: #252525
+        -moz-animation:textc 4s infinite linear;
+        -webkit-animation:textc 4s infinite linear;
+    }
+    h1[codename] {font-family: Product_Sans2;font-size: 70px;text-shadow: 3px 3px 0px white}
+}
+/*LG*/
+@media only screen and (min-width: 1200px) {
+    .con-user {
+      margin-left: auto;
+      margin-right: auto;
+    } 
+    .con-user.solo {
+      margin-left: 0px !important;
+      margin-right: 0px !important;
+    }
+    .animationmuter {width: 300px;height: 300px;
+        background: linear-gradient(to right, #ea576d, #feca02, #ff7043);
+        border-radius: 100%;
+        -moz-animation:spin5Pulse 1.5s infinite linear;
+        -webkit-animation:spin5Pulse 1.5s infinite linear;}
+    .con-img {
+        width: 300px;height: 300px;background: transparent;border-radius: 100%;padding-top: 10px;padding-left: 0px;
+        position: relative;bottom: 305px;
+    }
+    .con-img > img.img-con {width: 290px;height: 290px;border-radius: 100%;
+        -moz-animation:imgstay 2s infinite linear;
+        -webkit-animation:imgstay 2s infinite linear;
+    }
+    span.name {font-family: Product_Sans1;font-size: 30px;width: 100%;color: #252525
+        -moz-animation:textc 4s infinite linear;
+        -webkit-animation:textc 4s infinite linear;
+    }
+    h1[codename] {font-family: Product_Sans2;font-size: 70px;text-shadow: 3px 3px 0px white}
+}
+/*KEYFRAME's*/
+@-webkit-keyframes spin5Pulse {
+    0% { -webkit-transform:rotate(0deg);opacity:1;}
+    50% {opacity:1;}
+    100% { -webkit-transform:rotate(-360deg);opacity:1;}
+}
+@-webkit-keyframes imgstay {
+    0% { -webkit-transform:rotate(0deg) !important; opacity:0.7;}
+    50% {opacity:1;}
+    100% { -webkit-transform:rotate(0deg) !important; opacity:0.7;}
+}
+@-webkit-keyframes textc {
+    0% { color: #212121 }
+    50% {color: #880e4f ;}
+    100% { color: #212121  }
+}
+/*SET MD*/
+@media only screen and (min-width: 768px) {
+    h1[codename] {padding-top: 10%;}
+}
+
+/* Boxes 
+=========*/
+@media only screen and (max-width: 1190px) {
+     .box {
+      width: 100%;
+      height: 155px;
+      margin: 5em 0;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .box .box-title {
+      font-family: Product_Sans4;
+      text-align: center;
+      font-size: 20px;
+      padding: 0.2em 0 0 0;
+      position: relative;
+      color: #252525;
+    }
+    .box .box-header {
+      font-family: Product_Sans4;
+      text-align: center;
+        
+      padding: 0.5em 0 0 0;
+      position: relative;
+      background: rgba(255,255,255,0.8);
+      color: #252525;
+      margin-top: 5px;
+      width: 99%;
+      height:110px;
+    }
+    .emotion-style-food{font-size: 100px !important;}
+    .emotion-style-musik{font-size: 100px !important;}
+    .emotion-style-dekorasi{font-size: 100px !important;}
+    .emotion-style-pelayanan{font-size: 100px !important;}
+    .box-animasi {
+      background: linear-gradient(to right, #fdd835, #ff7043,#fdd835);
+      color: #252525 ;
+      width: 200%;
+      height: 155px;
+      position: absolute;
+      top: 0px;
+      transform:translateX(0%);
+      -moz-animation:slie 3s infinite linear;
+      -webkit-animation:slie 3s infinite linear;
+    }
+    @-webkit-keyframes slie {
+        0% {transform:translateX(0%);}
+    50% {transform:translateX(-50%);}
+    100% {transform:translateX(0%);}
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .box {
+      width: 100%;
+      height: 155px;
+      margin: 5em 0;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .box .box-title {
+      font-family: Product_Sans4;
+      text-align: center;
+      font-size: 20px;
+      padding: 0.2em 0 0 0;
+      position: relative;
+      color: #252525;
+    }
+    .box .box-header {
+      font-family: Product_Sans4;
+      text-align: center;
+        
+      padding: 0.5em 0 0 0;
+      position: relative;
+      background: rgba(255,255,255,0.8);
+      color: #252525;
+      margin-top: 5px;
+      width: 99%;
+      height:110px;
+    }
+    .emotion-style-food{font-size: 100px !important;}
+    .emotion-style-musik{font-size: 100px !important;}
+    .emotion-style-dekorasi{font-size: 100px !important;}
+    .emotion-style-pelayanan{font-size: 100px !important;}
+    .box-animasi {
+      background: linear-gradient(to right, #fdd835, #ff7043,#fdd835);
+      color: #252525 ;
+      width: 200%;
+      height: 155px;
+      position: absolute;
+      top: 0px;
+      transform:translateX(0%);
+      -moz-animation:slie 3s infinite linear;
+      -webkit-animation:slie 3s infinite linear;
+    }
+    @-webkit-keyframes slie {
+        0% {transform:translateX(0%);}
+    50% {transform:translateX(-50%);}
+    100% {transform:translateX(0%);}
+    }
+    
+    .btn {
+    font-size: 25px !important;
+    line-height: 0px !important;
+    padding: 2rem 3rem !important;
+}
+}
+
+/*CHART
+=======*/
+.item-percentage {
+    font-size: 17px;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-family: Product_Sans1;
+}
+.item-title {
+    font-size: 17px;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    font-family: Product_Sans4;
+}
+
+/*FOOTER
+========*/
+footer { position: absolute;bottom: 0px;margin-left: auto;margin-right: auto;width: 100%;}
+/*MD*/
+@media only screen and (min-width: 992px) and (max-width: 1366px) {
+    p[x-mas]{font-family: Helena-Font;font-size: 27px;color:#252525;position: relative;}
+    p[x-mas] span.niik{bottom: 30px;position: relative;}
+    p[x-mas] img {width: 100px;margin: 0px;padding: 0px;}
+    
+    span.copyright1 {font-family: Product_Sans4;font-size: 18px;}
+    span.copyright2 {font-family: Product_Sans2;font-size: 18px;}
+}
+/*LG*/
+@media only screen and (min-width: 1367px) {
+    p[x-mas]{font-family: Helena-Font;font-size: 40px;color:#252525;position: relative;}
+    p[x-mas] span.niik{bottom: 30px;position: relative;}
+    p[x-mas] img {width: 130px;margin: 0px;padding: 0px;}
+    
+    span.copyright1 {font-family: Product_Sans4;font-size: 25px;}
+    span.copyright2 {font-family: Product_Sans2;font-size: 25px;}
+}
