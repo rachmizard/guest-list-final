@@ -1,6 +1,6 @@
 (function($) {
     const DEFAULT_WIDTH = "100%";
-    const DEFAULT_HEIGHT = "100px";
+    const DEFAULT_HEIGHT = "80px";
     const palette = [
         '#C0392B', //Coklat//
         '#3A539B', //Biru Tua//
@@ -70,7 +70,7 @@
             div.classList.add('item-wrapper');
 
             //Percentage span
-            let span = document.createElement('p');
+            let span = document.createElement('span');
             span.textContent = `${prettifyPercentage(item.percent*100)} %`;
             span.style.color = "#252525";
             span.classList.add('item-percentage');

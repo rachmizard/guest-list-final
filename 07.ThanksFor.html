@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hasil Survery</title>
+    <!--Let browser know website is optimized for mobile-->
+        <link rel="shortcut icon" href="asset/img/LogoSurvey.png" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Import CSS-->
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="asset/css/bootlize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="asset/css/thame2.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="asset/css/opening-servery.css"  media="screen,projection"/>
+        <!--Import  ICON Social media-->
+        <link rel="stylesheet" href="css/bootlize-sosmedicon.css"/>
+        <style>
+        html {
+            background-color: white;
+        }
+
+        html.faded {
+            background-color: black;
+        }
+        body {
+            opacity: 1;
+            transition: 1s opacity;
+        }
+        body.fade-out {
+            opacity: 0;
+            transition: none;
+        }
+        </style>
+        <!--Import Google Icon Font (IF NEED )
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+    <!--Import Js-->
+        <script src="asset/js/jquery-3.2.1.min.js"></script>
+        <script src="asset/js/bootlize.min.js"></script>
+</head>
+<body>
+<div class="background-primary">
+<header>
+    <div class="gamavr center">
+        <img src="asset/img/smiley3.png" alt="">
+    </div>
+</header>
+<main>
+<h1 class="warning">Resolusion Large Only</h1>
+<div class="container">
+    <p class="awea">Terima kasih atas</p>
+    <p class="awea">Kehadiran dan Survey dari Bapak / Ibu</p>
+    <p class="awea">Semoga Memuaskan</p>
+</div><!--/contanier-->
+</main>
+<footer>
+    <div class="container-material">
+    <div class="row">
+        <div class="col-xs-12 center">
+            <p x-mas>
+                <span class="niik">Jimmy</span>
+                <img src="asset/img/wedding.png" alt="">
+                <span class="niik">Wulan</span>
+            </p>
+        </div><!--.col-->
+        <div class="col-xs-12 center">
+            <p>
+                <span class="copyright1">Original Concept by : </span>
+                <span class="copyright2">Jimmy Yogaswara | Birutekno inc.</span>
+            </p>
+        </div><!--/.col-->
+    </div><!--/.row-->
+    </div><!--/.container-->
+</footer>
+</div><!--/Background Primary-->
+</body>
+<script>document.body.className += ' fade-out';</script>
+<script>
+$(function() {
+    $('body').removeClass('fade-out');
+});
+  setTimeout(function () {
+      $('body').addClass('faded');
+       document.body.className += ' faded';
+       window.location.href = "06.Opening Survey.html"; //will redirect to your blog page (an ex: blog.html)
+    }, 5000); //will call the function after 4 secs.
+</script>
+</html>

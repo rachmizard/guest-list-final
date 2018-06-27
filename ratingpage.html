@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Rating Survey</title>
     <!--Let browser know website is optimized for mobile-->
-        <link rel="shortcut icon" href="asset/img/LogoSurvey.png" /> 
+        <link rel="shortcut icon" href="asset/img/LogoSurvey.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--Import CSS-->
         <!--Import materialize.css-->
@@ -13,11 +13,21 @@
         <link type="text/css" rel="stylesheet" href="asset/css/survey2.css"  media="screen,projection"/>
         <!--Import  ICON Social media-->
         <link rel="stylesheet" href="css/bootlize-sosmedicon.css"/>
+        <style>
+        html {
+            background-color: white;
+        }
+        body {
+            opacity: 1;
+            transition: 1s opacity;
+        }
+        body.fade-out {
+            opacity: 0;
+            transition: none;
+        }
+        </style>
         <!--Import Google Icon Font (IF NEED )
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
-    <!--Import Js-->
-        <script src="asset/js/jquery-3.2.1.min.js"></script>
-        <script src="asset/js/bootlize.min.js"></script>
 </head>
 <body>
 <div class="background-primary">
@@ -54,7 +64,7 @@
             <a class="btn blue darken-3 waves-effect waves-light next-1" href="#!">Next</a>
         </div>
     </div><!--/.row-->
-    
+
     <!--MUSIK-->
     <div class="row ea-2" style="display:none;">
         <div class="col-sm-12 col-xs-12 col-lg-4 center">
@@ -77,7 +87,7 @@
             <a class="btn blue darken-3 waves-effect waves-light next-2" href="#!">Next</a>
         </div>
     </div><!--/.row-->
-    
+
     <!--DEKORASI-->
     <div class="row ea-3" style="display:none;">
         <div class="col-sm-12 col-xs-12 col-lg-4 center">
@@ -100,7 +110,7 @@
             <a class="btn blue darken-3 waves-effect waves-light next-3" href="#!">Next</a>
         </div>
     </div><!--/.row-->
-    
+
     <!--PELAYANAN-->
     <div class="row ea-4" style="display:none;">
         <div class="col-sm-12 col-xs-12 col-lg-4 center">
@@ -128,7 +138,7 @@
   <div id="modal1" class="modal z-depth-5 orange lighten-4">
     <div class="modal-content center">
       <h4 class="font-4">Anda Yakin ?</h4>
-      
+
       <button onclick="storeData()" class="btn success orange darken-2">Ya</button>
       <a href="#!" class="modal-action modal-close waves-effect waves-green btn red lighten-1">Batal</a>
     </div>
@@ -156,6 +166,9 @@
 </footer>
 </div><!--/Background Primary-->
 </body>
+<!--Import Js-->
+<script src="asset/js/jquery-3.2.1.min.js"></script>
+<script src="asset/js/bootlize.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -171,17 +184,21 @@
 </script>
 <script src="asset/emoji-rating/emotion-ratings.js"></script>
 <script src="asset/js/survery2.js"></script>
+<script>document.body.className += ' fade-out';</script>
 <script>
-    
+$(function() {
+    $('body').removeClass('fade-out');
+});
 function storeData(){
     // $('#formfield').submit();
+    Materialize.toast('Mengirim survey...', 3000, 'rounded');
     document.getElementById('makanan');
     var databaseRef = firebase.database();
     var a = document.getElementById('makananRating');
     var b = document.getElementById('musicRating');
     var c = document.getElementById('dekorasiRating');
     var d = document.getElementById('pelayananRating');
-    
+
     databaseRef.ref('ratings/').push({
         makanan: a.value,
         music: b.value,
@@ -193,15 +210,13 @@ function storeData(){
         } else {
           // Data saved successfully!
         console.log("SUCCESS!");
-            if (Materialize.toast('Terima kasih atas kerja samanya :).', 3000, 'rounded')) {
                 $('#modal1').modal("close");
-                setTimeout(function(){ window.location.reload(); 
-                    /*LAYER2*/
+                setTimeout(function(){
+                    window.location.href = "07.ThanksFor.html";
                     $('.ea-4').hide(1000);
                     $('.ea-1').show(1000);
                  }, 1300);
-            }
-            
+
           // $("#makananRating").val("");
           // $("#musicRating").val("");
           // $("#dekorasiRating").val("");

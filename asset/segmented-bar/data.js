@@ -1,37 +1,37 @@
 var ref = firebase.database().ref("ratings/");
-var makanan1 = 0;
-var makanan2 = 0;
-var makanan3 = 0;
-var makanan4 = 0;
-var makanan5 = 0;
-var music1 = 0;
-var music2 = 0;
-var music3 = 0;
-var music4 = 0;
-var music5 = 0;
-var pelayanan1 = 0;
-var pelayanan2 = 0;
-var pelayanan3 = 0;
-var pelayanan4 = 0;
-var pelayanan5 = 0;
-var dekorasi1 = 0;
-var dekorasi2 = 0;
-var dekorasi3 = 0;
-var dekorasi4 = 0;
-var dekorasi5 = 0;
+var makanan1 = 0.0;
+var makanan2 = 0.0;
+var makanan3 = 0.0;
+var makanan4 = 0.0;
+var makanan5 = 0.0;
+var music1 = 0.0;
+var music2 = 0.0;
+var music3 = 0.0;
+var music4 = 0.0;
+var music5 = 0.0;
+var pelayanan1 = 0.0;
+var pelayanan2 = 0.0;
+var pelayanan3 = 0.0;
+var pelayanan4 = 0.0;
+var pelayanan5 = 0.0;
+var dekorasi1 = 0.0;
+var dekorasi2 = 0.0;
+var dekorasi3 = 0.0;
+var dekorasi4 = 0.0;
+var dekorasi5 = 0.0;
 ref.once('value').then(function(snapshot) {
     snapshot.forEach(function(childSnapshot){
-          // var key = childSnapshot.key;
-            if (childSnapshot.val().makanan == 1) {
-                makanan1 += 1;
-            }else if (childSnapshot.val().makanan == 2) {
-                makanan2 += 1;
-            }else if (childSnapshot.val().makanan == 3) {
-                makanan3 += 1;
-            }else if (childSnapshot.val().makanan == 4) {
-                makanan4 += 1;
-            }else if (childSnapshot.val().makanan == 5) {
-                makanan5 += 1;
+          var key = childSnapshot.key;
+            if (childSnapshot.val().makanan == '1') {
+                makanan1++;
+            }else if (childSnapshot.val().makanan == '2') {
+                makanan2++;
+            }else if (childSnapshot.val().makanan == '3') {
+                makanan3++;
+            }else if (childSnapshot.val().makanan == '4') {
+                makanan4++;
+            }else if (childSnapshot.val().makanan == '5') {
+                makanan5++;
             }
 
             if (childSnapshot.val().music == '1') {
