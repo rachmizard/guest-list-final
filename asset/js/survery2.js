@@ -3,7 +3,7 @@ $("#food").emotionsRating({
       //background emoji
       bgEmotion: "happy",
       //emoji array
-      emotions: ['disappointed','meh', 'happy', 'inlove'],
+      emotions: ['angry', 'disappointed','meh', 'happy', 'inlove'],
       //number of emoji
       count: 5,
       //color of emoji gold, red, blue, green, black, brown, pink, purple, orange
@@ -13,7 +13,7 @@ $("#food").emotionsRating({
       //input name
       inputName: "makananRating",
       //initialize the rating number
-      initialRating: 1,
+      initialRating: null,
  });
 $("#musik").emotionsRating({
     //background emoji

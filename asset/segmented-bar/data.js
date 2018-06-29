@@ -19,6 +19,13 @@ var dekorasi2 = 0.0;
 var dekorasi3 = 0.0;
 var dekorasi4 = 0.0;
 var dekorasi5 = 0.0;
+
+  var query = firebase.database().ref("ratings/").orderByChild("makanan");
+   query.once('value', function(snapshotEuy){
+        if (snapshotEuy.val().makanan) {
+                console.log("There are "+snapshotEuy.numC()+" ratingers");
+        }
+    });
 ref.once('value').then(function(snapshot) {
     snapshot.forEach(function(childSnapshot){
           var key = childSnapshot.key;
