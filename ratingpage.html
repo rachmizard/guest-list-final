@@ -13,19 +13,7 @@
         <link type="text/css" rel="stylesheet" href="asset/css/survey2.css"  media="screen,projection"/>
         <!--Import  ICON Social media-->
         <link rel="stylesheet" href="css/bootlize-sosmedicon.css"/>
-        <style>
-        html {
-            background-color: white;
-        }
-        body {
-            opacity: 1;
-            transition: 1s opacity;
-        }
-        body.fade-out {
-            opacity: 0;
-            transition: none;
-        }
-        </style>
+        <link rel="stylesheet" href="asset/css/animate.css">
         <!--Import Google Icon Font (IF NEED )
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
 </head>
@@ -212,9 +200,8 @@ function storeData(){
         console.log("SUCCESS!");
                 $('#modal1').modal("close");
                 setTimeout(function(){
+                    $('body').addClass('animated zoomOutDown');
                     window.location.href = "07.ThanksFor.html";
-                    $('.ea-4').hide(1000);
-                    $('.ea-1').show(1000);
                  }, 1300);
 
           // $("#makananRating").val("");

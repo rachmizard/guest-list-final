@@ -13,33 +13,17 @@
         <link type="text/css" rel="stylesheet" href="asset/css/opening-servery.css"  media="screen,projection"/>
         <!--Import  ICON Social media-->
         <link rel="stylesheet" href="css/bootlize-sosmedicon.css"/>
-        <style>
-        html {
-            background-color: white;
-        }
-
-        html.faded {
-            background-color: black;
-        }
-        body {
-            opacity: 1;
-            transition: 1s opacity;
-        }
-        body.fade-out {
-            opacity: 0;
-            transition: none;
-        }
-        </style>
+        <link rel="stylesheet" href="asset/css/animate.css">
         <!--Import Google Icon Font (IF NEED )
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
     <!--Import Js-->
         <script src="asset/js/jquery-3.2.1.min.js"></script>
         <script src="asset/js/bootlize.min.js"></script>
 </head>
-<body>
+<body class="background-primary">
 <div class="background-primary">
 <header>
-    <div class="gamavr center">
+    <div class="gamavr center animated zoomInDown">
         <img src="asset/img/smiley3.png" alt="">
     </div>
 </header>
@@ -72,15 +56,12 @@
 </footer>
 </div><!--/Background Primary-->
 </body>
-<script>document.body.className += ' fade-out';</script>
 <script>
-$(function() {
-    $('body').removeClass('fade-out');
-});
   setTimeout(function () {
-      $('body').addClass('faded');
-       document.body.className += ' faded';
-       window.location.href = "06.Opening Survey.html"; //will redirect to your blog page (an ex: blog.html)
-    }, 5000); //will call the function after 4 secs.
+        $('body').addClass('animated zoomOutDown');
+       setTimeout(function(){
+        window.location.href = "06.Opening Survey.html"; //will redirect to your blog page (an ex: blog.html)
+    }, 1000);
+    }, 4000); //will call the function after 4 secs.
 </script>
 </html>

@@ -12,9 +12,11 @@
         <link type="text/css" rel="stylesheet" href="asset/css/result.css"  media="screen,projection"/>
         <!--Import  ICON Social media-->
         <link rel="stylesheet" href="asset/css/bootlize-sosmedicon.css"/>
+        <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <!--Import Google Icon Font (IF NEED )
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
-        <style>
+        <!-- <style>
             .fade {
               animation-name: fade;
               animation-duration: 2s;
@@ -28,13 +30,13 @@
                 opacity: 1;
               }
             }
-        </style>
+        </style> -->
     <!--Import Js-->
         <script src="asset/js/jquery-3.2.1.min.js"></script>
         <script src="asset/js/bootlize.min.js"></script>
         
 </head>
-<body id="retrieve">
+<body id="retrieve" class="background-primary">
 <div class="opsi">
       <span  class="aw">======================
 	  	<div class="checkboxThree">
@@ -44,9 +46,6 @@
      </span>
 </div><!--/.opsi-->
         
-
-
-
 <!---->
 <div class="scdown">
     <a href="#!" id="ToUp">GoUp</a>
@@ -56,10 +55,24 @@
 <div class="total">
     <span id="total"></span>
 </div><!--/total-->
+
+<!-- Modal Structure -->
+  <div id="modalInputan" class="modal z-depth-5 orange lighten-4">
+    <div class="modal-content center">
+      <img src="https://www.macupdate.com/images/icons256/57746.png" alt="icon" width="140" height="140">
+      <p class="brown-text" akhir>Aktivasi Kode</p>
+      <p class="">Masukan kode sesuai di aplikasi untuk menampilkan guest pictures.</p>
+      <input type="text" class="" id="kode">
+      <button onclick="cobaInputan()" class="btn success orange darken-2">OK</button>
+    </div>
+  <!--    <div class="modal-footer"></div>-->
+  </div><!--/contanier-->
 </body>
 
 <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--Import Js-->
+<script src="asset/js/jquery-3.2.1.min.js"></script>
+<script src="asset/js/bootlize.min.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -74,19 +87,4 @@
 </script>
 <script src="system.js"></script>
 <script src="asset/js/result.js"></script>
-<!-- IntersectionObserver polyfill -->
-<script src="https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js"></script>
-<!-- Lozad.js from CDN -->
-<script src="https://cdn.jsdelivr.net/npm/lozad"></script>
-<script>
-    // Initialize library
-lozad('.lozad', {
-    load: function(el) {
-        el.src = el.dataset.src;
-        el.onload = function() {
-            el.classList.add('fade')
-        }
-    }
-}).observe();
-</script>
 </html>

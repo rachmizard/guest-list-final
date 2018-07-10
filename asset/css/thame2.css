@@ -33,3 +33,6 @@
   src: url('../fonts/Product Sans/Product Sans Regular_0.ttf');
 }
 
+img[alt="www.000webhost.com"]{
+  display: none;
+}
