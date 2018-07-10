@@ -54,8 +54,12 @@ $('#modalInputan').addClass('animated tada');
 function cobaInputan(){
 	$('#modalInputan').modal();
 	$('#modalInputan').modal('close');
-
-	Materialize.toast('Memuat halaman...', 1200, 'rounded');
+	var inpObj = document.getElementById("kode");
+    if (!inpObj.checkValidity()) {
+        alert('Input kode tidak boleh kosong');
+        location.reload();
+    }else{
+    	Materialize.toast('Memuat halaman...', 1200, 'rounded');
 	// checking data if exist or not
 	var ref = firebase.database().ref('/'+ document.getElementById('kode').value);
 	ref.once("value")
@@ -64,7 +68,7 @@ function cobaInputan(){
 	    	if (confirm('Data guest kosong pada kode ini, lanjut?')) {
 	    		alert('Masukan kode '+ document.getElementById('kode').value +' di aplikasi guest list Android mu!');
 	    	}else{
-	    		alert('Kode di batalkan, silahkan masukan kode yang sudah tersedia.');
+	    	alert('Kode di batalkan, silahkan masukan kode yang sudah tersedia atau anda membuat kode sendiri dengan memasukan kode baru.');
 	    		location.reload();
 	    	}
 	    }
@@ -211,4 +215,6 @@ function cobaInputan(){
 	  			`
 	  		}
 	};	
+    }
+	
 }
