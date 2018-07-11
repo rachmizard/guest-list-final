@@ -12,31 +12,17 @@
         <link type="text/css" rel="stylesheet" href="asset/css/result.css"  media="screen,projection"/>
         <!--Import  ICON Social media-->
         <link rel="stylesheet" href="asset/css/bootlize-sosmedicon.css"/>
-        <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+        <link rel="stylesheet" href="asset/css/animate.css">
         <!--Import Google Icon Font (IF NEED )
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
-        <!-- <style>
-            .fade {
-              animation-name: fade;
-              animation-duration: 2s;
-            }
-
-            @keyframes fade {
-              from {
-                opacity: 0;
-              }
-              to {
-                opacity: 1;
-              }
-            }
-        </style> -->
     <!--Import Js-->
         <script src="asset/js/jquery-3.2.1.min.js"></script>
         <script src="asset/js/bootlize.min.js"></script>
         
 </head>
 <body id="retrieve" class="background-primary">
+  <div id="noData">
+  </div>
 <div class="opsi">
       <span  class="aw">======================
 	  	<div class="checkboxThree">
@@ -57,11 +43,11 @@
 </div><!--/total-->
 
 <!-- Modal Structure -->
-  <div id="modalInputan" class="modal z-depth-5 orange lighten-4">
+  <div id="modalInputan" class="modal z-depth-5 orange lighten-4 animated tada">
     <div class="modal-content center">
       <img src="https://www.macupdate.com/images/icons256/57746.png" alt="icon" width="140" height="140">
-      <p class="brown-text" akhir>Aktivasi Kode</p>
-      <p class="">Masukan kode sesuai di aplikasi untuk menampilkan guest pictures.</p>
+      <p class="brown-text" akhir>Masukan Kode</p>
+      <p class="">Masukan kode sesuai kode di aplikasi android untuk menampilkan guest pictures atau membuat kode baru di bawah ini.</p>
       <input type="text" class="" id="kode" required>
       <button onclick="cobaInputan()" class="btn success orange darken-2">OK</button>
     </div>
@@ -85,6 +71,6 @@
   };
   firebase.initializeApp(config);
 </script>
-<script src="system.js"></script>
+<script src="asset/js/system.js"></script>
 <script src="asset/js/result.js"></script>
 </html>

@@ -49,39 +49,58 @@
 
 $('#modalInputan').modal();
 $('#modalInputan').modal('open');
-$('#modalInputan').addClass('animated tada');
+$('#modalInputan').addClass('animated fadeInUp');
+// plugin jquery
+(function ($) {
+    $.fn.replaceClass = function (pFromClass, pToClass) {
+        return this.removeClass(pFromClass).addClass(pToClass);
+    };
+}(jQuery));
 
 function cobaInputan(){
-	$('#modalInputan').modal();
-	$('#modalInputan').modal('close');
+	$('#modalInputan').replaceClass('fadeInUp', 'fadeOutDown');
 	var inpObj = document.getElementById("kode");
     if (!inpObj.checkValidity()) {
-        alert('Input kode tidak boleh kosong');
+        alert('Input kode tidak boleh kosong!');
         location.reload();
     }else{
-    	Materialize.toast('Memuat halaman...', 1200, 'rounded');
+    	Materialize.toast('Mengecek kode...', 1200, 'rounded');
 	// checking data if exist or not
 	var ref = firebase.database().ref('/'+ document.getElementById('kode').value);
 	ref.once("value")
 	  .then(function(snapshot) {
 	    if (!snapshot.exists()) {
+	    	var elements = '<header><div class="head-bg center"><img src="asset/img/brush_screen.png" alt=""><div class="head-text white-text"><p awal>Data tamu masih kosong.</p></div></div></header>';
+	    	document.getElementById('noData').innerHTML = elements;
+	    	$('#noData').addClass('animated zoomInDown');
 	    	if (confirm('Data guest kosong pada kode ini, lanjut?')) {
 	    		alert('Masukan kode '+ document.getElementById('kode').value +' di aplikasi guest list Android mu!');
 	    	}else{
 	    	alert('Kode di batalkan, silahkan masukan kode yang sudah tersedia atau anda membuat kode sendiri dengan memasukan kode baru.');
 	    		location.reload();
 	    	}
-	    }
+	    }else{
+	    	Materialize.toast('Kode tervalidasi!', 1200, 'rounded');
+		}
 	  });
+
 	// retrieving guest list
 	var db = firebase.database();
 	var retrieve = document.getElementById('retrieve');
 	var retrieveRef = db.ref('/'+ document.getElementById('kode').value);
 		retrieveRef.on('child_added', (data) => {
-		//counting data
-		firebase.database().ref('/'+ document.getElementById('kode').value).on("value", function(snapshot) {
-		  console.log("There are "+snapshot.numChildren()+" guest");
-		});
+			
+	//counting data
+	firebase.database().ref('/'+ document.getElementById('kode').value).on("value", function(snapshot) {
+	  console.log("There are "+snapshot.numChildren()+" guest");
+	  if (snapshot.numChildren() > 0) {
+	  	// condition if data exists more than 0 will be removed "Data tamu kosong" panel.
+	  	$('#noData').remove();
+	  }else{
+	  	alert('Data pada kode '+ document.getElementById('kode').value + ' telah di hapus/kosong, mohon input kembali kode baru.')
+	  	location.reload();
+	  }
+	});
 		  var tr = document.createElement('div');
 		  tr.className = "background-primary";
 		  tr.id = data.key;
@@ -113,7 +132,7 @@ function cobaInputan(){
 					            <p awal>Thank you for coming</p>
 					            <p akhir>to our party</p>
 					        </div><!--/head text-->
-					    </div><!--/.head bg-->
+					    </div><!--/.head bg-->x
 					</header>
 					<main>
 					    <div class="container-material">
@@ -151,7 +170,7 @@ function cobaInputan(){
 					</footer>
 					<!--/STOP REPEAT-->
 		  		`
-	  		}else if(status = 'Couple')
+	  		}else if(status == 'Couple')
 	  		{
 	  			return `
 	  				<header>
@@ -166,31 +185,67 @@ function cobaInputan(){
 					<main>
 					    <div class="container-material">
 						    <div class="row">
-						        <div class="col-sm-4 col-xs-4 center">
+						        <div class="col-sm-12 col-xs-12 center">
 						            <div class="con-user">
 						                <div class="animationmuter"></div><!--/.animation muter-->
 						                <div class="con-img">
 						                    <img src="${foto}" alt="${nama}" class="img-con">
-						                    <span class="name">Mr. ${nama}</span><!--/.name-->
+						                    <span class="name">Mr. ${nama} &amp; Mrs. ${nama1}</span><!--/.name-->
 						                </div><!--/.conimg-->
 						            </div><!--/.conuser-->
-						        </div><!--col-->
-						        <div class="col-sm-4 col-xs-4 center">
-						            <h1 codename>&amp;</h1>
-						        </div><!--col-->
-						        <div class="col-sm-4 col-xs-4 center">
+						        </div>
+						    </div><!--/.row-->
+					    </div><!--/.container-->
+					</main>
+					<footer>
+					    <div class="container-material">
+					    <div class="row">
+					        <div class="col-xs-12 center">
+					            <p x-mas>
+					                <span class="niik">Jimmy</span>
+					                <img src="asset/img/wedding.png" alt="">
+					                <span class="niik">Wulan</span>
+					            </p>
+					        </div><!--/.col-->
+					        <div class="col-xs-12 center">
+					            <p>
+					                <span class="copyright1">Original Concept by : </span>
+					                <span class="copyright2">Jimmy Yogaswara | Birutekno inc.</span>
+					            </p>
+					        </div><!--/.col-->
+					    </div><!--/.row-->
+					    </div><!--/.container-->
+					</footer>
+					<!--/STOP REPEAT-->
+					<!--/STOP REPEAT-->
+	  			`
+	  		}else if(status == 'Family')
+	  		{
+	  			return `
+	  				<header>
+					    <div class="head-bg center">
+					        <img src='asset/img/brush_screen.png' alt="">
+					        <div class="head-text">
+					            <p awal>Thank you for coming</p>
+					            <p akhir>to our party</p>
+					        </div><!--/head text-->
+					    </div><!--/.head bg-->
+					</header>
+					<main>
+					    <div class="container-material">
+						    <div class="row">
+						        <div class="col-sm-12 col-xs-12 center">
 						            <div class="con-user">
 						                <div class="animationmuter"></div><!--/.animation muter-->
 						                <div class="con-img">
-						                    <img src="${foto1}" alt="${nama1}" class="img-con">
-						                     <span class="name">Mrs. ${nama1}</span><!--/.name-->
+						                    <img src="${foto}" alt="${nama}" class="img-con">
+						                    <span class="name">${nama}'s Family</span><!--/.name-->
 						                </div><!--/.conimg-->
-						               
 						            </div><!--/.conuser-->
-						        </div><!--col-->
+						        </div>
 						    </div><!--/.row-->
 					    </div><!--/.container-->
-					
+					</main>
 					<footer>
 					    <div class="container-material">
 					    <div class="row">
