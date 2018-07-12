@@ -17,7 +17,7 @@
         <!--Import Google Icon Font (IF NEED )
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
 </head>
-<body>
+<body class="animated zoomInDown">
 <div class="background-primary">
 <header>
     <div class="head-bg center">
@@ -38,6 +38,7 @@
                 <div class="animationmuter"></div><!--/.animation muter-->
                 <div class="con-img">
                     <img src="asset/img/food2.png" alt="Augusta Albertus" class="img-con">
+                    <span class="name dexciption">MAKANAN</span><!--/.name-->
                 </div><!--/.conimg-->
             </div><!--/.conuser-->
         </div><!--col-->
@@ -60,6 +61,7 @@
                 <div class="animationmuter"></div><!--/.animation muter-->
                 <div class="con-img">
                     <img src="asset/img/Music.png" alt="Augusta Albertus" class="img-con">
+                    <span class="name dexciption">MUSIK</span><!--/.name-->
                 </div><!--/.conimg-->
             </div><!--/.conuser-->
         </div><!--col-->
@@ -83,6 +85,7 @@
                 <div class="animationmuter"></div><!--/.animation muter-->
                 <div class="con-img">
                     <img src="asset/img/decoratio2.png" alt="Augusta Albertus" class="img-con">
+                    <span class="name dexciption">DEKORASI</span><!--/.name-->
                 </div><!--/.conimg-->
             </div><!--/.conuser-->
         </div><!--col-->
@@ -106,6 +109,7 @@
                 <div class="animationmuter"></div><!--/.animation muter-->
                 <div class="con-img">
                     <img src="asset/img/weiterz.png" alt="Augusta Albertus" class="img-con">
+                    <span class="name dexciption">PELAYANAN</span><!--/.name-->
                 </div><!--/.conimg-->
             </div><!--/.conuser-->
         </div><!--col-->
@@ -174,9 +178,13 @@
 <script src="asset/js/survery2.js"></script>
 <script>document.body.className += ' fade-out';</script>
 <script>
-$(function() {
-    $('body').removeClass('fade-out');
-});
+// plugin jquery
+(function ($) {
+    $.fn.replaceClass = function (pFromClass, pToClass) {
+        return this.removeClass(pFromClass).addClass(pToClass);
+    };
+}(jQuery));
+
 function storeData(){
     // $('#formfield').submit();
     Materialize.toast('Mengirim survey...', 3000, 'rounded');
@@ -199,6 +207,7 @@ function storeData(){
           // Data saved successfully!
         console.log("SUCCESS!");
                 $('#modal1').modal("close");
+                $('body').replaceClass('zoomInDown', 'zoomOutUp');
                 setTimeout(function(){
                     $('body').addClass('animated zoomOutDown');
                     window.location.href = "07.ThanksFor.html";

@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JIMMY'S & WULAN'S WEDDING</title>
+    <title>JIMMY'S & WULAN'S WEDDINGy</title>
     <!--Let browser know website is optimized for mobile-->
-        <link rel="shortcut icon" href="asset/img/LogoSurvey.png" />
+        <link rel="shortcut icon" href="asset/img/LogoSurvey.png" /> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!--Import CSS-->
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="asset/css/bootlize.min.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="asset/css/thame2.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="asset/css/opening-servery.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="asset/css/animate.css"  media="screen,projection"/>
         <!--Import  ICON Social media-->
         <link rel="stylesheet" href="css/bootlize-sosmedicon.css"/>
-        <link rel="stylesheet" href="asset/css/animate.css">
         <!--Import Google Icon Font (IF NEED )
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
     <!--Import Js-->
@@ -42,48 +42,120 @@
            <div class="col-sm-6">
                <div class="animationmuter"></div><!--/.animation muter-->
                <div class="con-img">
-                   <img src="asset/img/food2.png" alt="Augusta Albertus" class="img-con" />
+                   <img src="asset/img/food2.png" alt="Augusta Albertus"  href="#mod-makanan" class="img-con modal-trigger" />
                </div><!--/.conimg-->
            </div><!--.col-->
            <div class="col-sm-6 aww">
-               <span class="dexciption">Makanan</span>
+               <span class="dexciption modal-trigger" href="#mod-makanan">Makanan</span>
            </div><!--.col-->
         </div><!--.col-->
+<!-- Modal Structure -->
+<div id="mod-makanan" class="modal dexigaming">
+    <div class="modal-content center">
+    <form action="" role="form" id="form-makanan">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="box box-orange box-example-movie">
+            <div class="box-animasi"></div>
+            <div class="box-title">Survey : Makanan</div>
+            <div class="box-header"><div id="food"></div></div>
+        </div>
+        </div><!--/.col-->
+      <a href="#!" id="submit-makanan" onclick="storeData()" class="btn success waves-effect waves-green">Selesai</a>
+      <a href="#!" class="modal-action fail modal-close waves-effect waves-green btn">Batal</a>
+    </form> 
+    </div>
+<!--<div class="modal-footer"></div>-->
+</div><!--/contanier-->
+        
         <div class="col-md-6">
             <div class="col-sm-6">
                <div class="animationmuter"></div><!--/.animation muter-->
                <div class="con-img">
-                   <img src="asset/img/weiterz.png" alt="Augusta Albertus" class="img-con" />
+                   <img src="asset/img/272046.png" alt="Augusta Albertus" class="img-con modal-trigger" href="#mod-pelayanan" />
                </div><!--/.conimg-->
            </div><!--.col-->
            <div class="col-sm-6 aww">
-               <span class="dexciption">Pelayanan</span>
+               <span class="dexciption modal-trigger" href="#mod-pelayanan">Dekorasi</span>
            </div><!--.col-->
         </div><!--.col-->
+<!-- Modal Structure -->
+<div id="mod-pelayanan" class="modal dexigaming">
+    <div class="modal-content center">
+    <form action="" role="form" id="form-pelayanan">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="box box-orange box-example-movie">
+            <div class="box-animasi"></div>
+            <div class="box-title">Survey : Dekorasi</div>
+            <div class="box-header"><div id="pelayanan"></div></div>
+        </div>
+        </div><!--/.col-->
+      <a href="#!" id="submit-pelayanan" onclick="storeData()" class="btn success waves-effect waves-green">Selesai</a>
+      <a href="#!" class="modal-action fail modal-close waves-effect waves-green btn">Batal</a>
+    </form> 
+    </div>
+<!--<div class="modal-footer"></div>-->
+</div><!--/contanier-->
+        
         <div class="col-md-6" style="padding-top: 20px;">
             <div class="col-sm-6">
                <div class="animationmuter"></div><!--/.animation muter-->
                <div class="con-img">
-                   <img src="asset/img/Design.png" alt="Augusta Albertus" class="img-con" />
+                   <img src="asset/img/weiterz.png" alt="Augusta Albertus" class="img-con modal-trigger" href="#mod-dekorasi"/>
                </div><!--/.conimg-->
            </div><!--.col-->
            <div class="col-sm-6 aww">
-               <span class="dexciption">Dekorasi</span>
+               <span class="dexciption modal-trigger" href="#mod-dekorasi">Pelayanan</span>
            </div><!--.col-->
         </div><!--.col-->
+<!-- Modal Structure -->
+<div id="mod-dekorasi" class="modal dexigaming">
+    <div class="modal-content center">
+    <form action="" role="form" id="form-dekorasi">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="box box-orange box-example-movie">
+            <div class="box-animasi"></div>
+            <div class="box-title">Survey : Pelayanan</div>
+            <div class="box-header"><div id="dekorasi"></div></div>
+        </div>
+        </div><!--/.col-->
+      <a href="#!" id="submit-dekorasi" onclick="storeData()" class="btn success waves-effect waves-green">Selesai</a>
+      <a href="#!" class="modal-action fail modal-close waves-effect waves-green btn">Batal</a>
+    </form> 
+    </div>
+<!--<div class="modal-footer"></div>-->
+</div><!--/contanier-->
+        
          <div class="col-md-6" style="padding-top: 20px;">
             <div class="col-sm-6">
                <div class="animationmuter"></div><!--/.animation muter-->
                <div class="con-img">
-                   <img src="asset/img/Music.png" alt="Augusta Albertus" class="img-con" />
+                   <img src="asset/img/1765x20.png" alt="Augusta Albertus" class="img-con modal-trigger" href="#mod-musik"/>
                </div><!--/.conimg-->
            </div><!--.col-->
            <div class="col-sm-6 aww">
-               <span class="dexciption">Musik</span>
+               <span class="dexciption modal-trigger" href="#mod-musik">Musik</span>
            </div><!--.col-->
         </div><!--.col-->
+<!-- Modal Structure -->
+<div id="mod-musik" class="modal dexigaming">
+    <div class="modal-content center">
+    <form action="" role="form" id="form-musik">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="box box-orange box-example-movie">
+            <div class="box-animasi"></div>
+            <div class="box-title">Survey : Musik</div>
+            <div class="box-header"><div id="musik"></div></div>
+        </div>
+        </div><!--/.col-->
+      <a href="#!" id="submit-musik" onclick="storeData()" class="btn success waves-effect waves-green">Selesai</a>
+      <a href="#!" class="modal-action fail modal-close waves-effect waves-green btn">Batal</a>
+    </form> 
+    </div>
+<!--<div class="modal-footer"></div>-->
+</div><!--/contanier-->
+        
         <div class="col-xs-12 center" style="padding-top: 10px;">
-            <a class="btn bluex darken-3 waves-effect waves-light next-1" href="ratingpage.html">Mulai Survey Semua Pelayanan</a>
+            <a class="btn bluex darken-3 waves-effect waves-light next-1" href="ratingpage.html">Survey Semua</a>
         </div>
     </div><!--/.row-->
 </div><!--/contanier-->
@@ -108,5 +180,66 @@
     </div><!--/.container-->
 </footer>
 </div><!--/Background Primary-->
+
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCBv0ye0-gH5PDk4PnVjk23tR4FzbJ_b14",
+    authDomain: "guestlist-birutekno.firebaseapp.com",
+    databaseURL: "https://guestlist-birutekno.firebaseio.com",
+    projectId: "guestlist-birutekno",
+    storageBucket: "guestlist-birutekno.appspot.com",
+    messagingSenderId: "361147602447"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="asset/emoji-rating/emotion-ratings.js"></script>
+<script src="asset/js/survery2.js"></script>
+<script>
+// plugin jquery
+(function ($) {
+    $.fn.replaceClass = function (pFromClass, pToClass) {
+        return this.removeClass(pFromClass).addClass(pToClass);
+    };
+}(jQuery));
+
+
+function storeData(){
+    // $('#formfield').submit();
+    Materialize.toast('Mengirim survey...', 3000, 'rounded');
+    document.getElementById('makanan');
+    var databaseRef = firebase.database();
+    var a = document.getElementById('makananRating');
+    var b = document.getElementById('musicRating');
+    var c = document.getElementById('dekorasiRating');
+    var d = document.getElementById('pelayananRating');
+
+    databaseRef.ref('ratings/').push({
+        makanan: a.value,
+        music: b.value,
+        pelayanan: c.value,
+        dekorasi: d.value
+      }, function(error) {
+        if (error) {
+          console.log("Something went wrong!");
+        } else {
+          // Data saved successfully!
+        console.log("SUCCESS!");
+                $('#modal1').modal("close");
+                Materialize.toast('Terima kasih atas survey anda.', 3000, 'rounded');
+                setTimeout(function(){
+                    location.reload();
+                 }, 1300);
+
+          // $("#makananRating").val("");
+          // $("#musicRating").val("");
+          // $("#dekorasiRating").val("");
+          // $("#pelayananRating").val("");
+        }
+      });
+}
+
+</script>
 </body>
 </html>

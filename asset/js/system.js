@@ -64,7 +64,7 @@ function cobaInputan(){
         alert('Input kode tidak boleh kosong!');
         location.reload();
     }else{
-    	Materialize.toast('Mengecek kode...', 1200, 'rounded');
+    	Materialize.toast('Mengecek kode mohon tunggu...', 1900, 'rounded');
 	// checking data if exist or not
 	var ref = firebase.database().ref('/'+ document.getElementById('kode').value);
 	ref.once("value")
@@ -74,13 +74,14 @@ function cobaInputan(){
 	    	document.getElementById('noData').innerHTML = elements;
 	    	$('#noData').addClass('animated zoomInDown');
 	    	if (confirm('Data guest kosong pada kode ini, lanjut?')) {
-	    		alert('Masukan kode '+ document.getElementById('kode').value +' di aplikasi guest list Android mu!');
+	    		alert('Masukan kode **'+ document.getElementById('kode').value +'** di aplikasi guest list Android mu!');
 	    	}else{
-	    	alert('Kode di batalkan, silahkan masukan kode yang sudah tersedia atau anda membuat kode sendiri dengan memasukan kode baru.');
+	    	alert('Kode di batalkan, silahkan masukan kode yang sudah tersedia atau anda membuat kode sendiri dengan memasukan kode baru.');	
+	  			$('#noData').remove();
 	    		location.reload();
 	    	}
 	    }else{
-	    	Materialize.toast('Kode tervalidasi!', 1200, 'rounded');
+	    	Materialize.toast('Kode Aktif!', 2900, 'rounded');
 		}
 	  });
 
@@ -89,7 +90,7 @@ function cobaInputan(){
 	var retrieve = document.getElementById('retrieve');
 	var retrieveRef = db.ref('/'+ document.getElementById('kode').value);
 		retrieveRef.on('child_added', (data) => {
-			
+
 	//counting data
 	firebase.database().ref('/'+ document.getElementById('kode').value).on("value", function(snapshot) {
 	  console.log("There are "+snapshot.numChildren()+" guest");

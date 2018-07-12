@@ -34,9 +34,9 @@
 .head-bg img {width: 100%;}
 
 .head-text {position: absolute;top: 15px;width: 100%;height: 100%}
-p[awal]{font-family: Helena-Font;font-size: 100px;color:#fff;margin-top: 0px;margin-right: 0px;
-     -moz-animation:headtext 2s infinite linear;
-     -webkit-animation:headtext 2s infinite linear;
+p[awal]{font-family: Helena-Font;font-size: 100px;color:#212121;margin-top: 0px;margin-right: 0px;
+/*     -moz-animation:headtext 2s infinite linear;*/
+/*     -webkit-animation:headtext 2s infinite linear;*/
 }
 @-webkit-keyframes headtext {
     0% { color: #feca02;opacity:1;}
@@ -73,7 +73,7 @@ p[awal]{font-family: Helena-Font;font-size: 100px;color:#fff;margin-top: 0px;mar
         -moz-animation:textc 4s infinite linear;
         -webkit-animation:textc 4s infinite linear;
     }
-    h1[codename] {font-family: Product_Sans2;font-size: 30px;text-shadow: 3px 3px 0px white}
+    h1[codename] {font-family: Product_Sans2;font-size: 30px;text-shadow: 3px 3px 0px white;line-height: 0px;}
 }
 /*SM*/
 @media only screen and (min-width: 768px) and (max-width: 991px){
@@ -148,6 +148,7 @@ p[awal]{font-family: Helena-Font;font-size: 100px;color:#fff;margin-top: 0px;mar
         -webkit-animation:textc 4s infinite linear;
     }
     h1[codename] {font-family: Product_Sans2;font-size: 70px;text-shadow: 3px 3px 0px white}
+    span.dexciption {font-family: Product_Sans2;font-size: 45px;text-shadow: 2px 2px 0px #ddd;}
 }
 /*KEYFRAME's*/
 @-webkit-keyframes spin5Pulse {
@@ -161,9 +162,9 @@ p[awal]{font-family: Helena-Font;font-size: 100px;color:#fff;margin-top: 0px;mar
     100% { -webkit-transform:rotate(0deg) !important; opacity:0.7;}
 }
 @-webkit-keyframes textc {
-    0% { color: #212121 }
-    50% {color: #880e4f ;}
-    100% { color: #212121  }
+    0% { color: #252525 }
+    50% {color: #252525 ;}
+    100% { color: #252525  }
 }
 /*SET MD*/
 @media only screen and (min-width: 768px) {
@@ -315,3 +316,9 @@ footer { position: absolute;bottom: 0px;margin-left: auto;margin-right: auto;wid
     span.copyright1 {font-family: Product_Sans4;font-size: 25px;}
     span.copyright2 {font-family: Product_Sans2;font-size: 25px;}
 }
+
+/*HALAMAN OPENING
+=================*/
+.silahkanop{font-size: 40px;font-family: Product_Sans1;}
+a.btn.success {background-color: #ff7043 !important}
+a.btn.fail {background-color: #ea576d !important}

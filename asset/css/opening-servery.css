@@ -75,7 +75,7 @@ p[awal]{font-family: Helena-Font;font-size: 100px;color:#fff;margin-top: 0px;mar
       margin-right: 0px !important;
     }
     .animationmuter {width: 200px;height: 200px;
-        background: linear-gradient(to right, #ea576d, #feca02, #ff7043);
+/*        background: linear-gradient(to right, #ea576d, #feca02, #ff7043);*/
         border-radius: 100%;
         -moz-animation:spin5Pulse 1.5s infinite linear;
         -webkit-animation:spin5Pulse 1.5s infinite linear;}
@@ -269,3 +269,13 @@ footer { position: absolute;bottom: 0px;margin-left: auto;margin-right: auto;wid
 .gamavr {width: 200px;padding-top: 10px;6}
 .gamavr img {width: 100%;}
 p.awea {font-family: Product_Sans2;font-size: 50px;text-shadow: 3px 3px 0px white;position: relative;top: 40px;text-align: center;}
+
+/*MODAL*/
+.modal {margin-left: 10px;margin-right: 10px; width: 98%;}
+.modal.dexigaming {
+    background-color:rgba(255, 224, 178,0.9)!important;
+    border-radius: 15px;
+}
+a.btn.success {background-color: #ff7043 !important}
+a.btn.fail {background-color: #ea576d !important}
+/*to left, #ea576d, #feca02, #ff7043);*/
